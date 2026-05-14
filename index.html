@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Strategic Funnel Audit — Victoria Ferraz</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/framer-motion@11/dist/framer-motion.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #0b0b0f; }
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+  body { font-family: Inter, sans-serif; }
+  .whitespace-pre-line { white-space: pre-line; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script>
+const { useState } = React;
+const { motion, AnimatePresence } = window.Motion || window["framer-motion"] || {};
+
+const sections = [
+  {
+    title: "Hey Victoria — I didn't skim this.",
+    subtitle: "I went through your ecosystem properly.",
+    content: "I looked at your content, your positioning, your lead magnet, and how people currently move from your videos into your offer system.\n\nI'm going to be direct, but in a good way.\n\nYou've already done the hard part — you've built attention, trust, and emotional resonance in a very competitive niche (hormones, skin, inflammation, fatigue, thyroid confusion).\n\nMost creators never even get that far. You have."
+  },
+  {
+    title: "What's actually happening in her audience",
+    subtitle: "This is the psychology you're working with",
+    content: "Your audience is not 'learning wellness'.\n\nThey are trying to solve a looping internal question:\n\n'Why does my body feel broken when I'm doing everything right?'\n\nThat one sentence is the entire funnel.\n\nEverything else (skin, hormones, digestion, energy, weight) are just symptoms they use to describe that confusion.\n\nWhen you understand that, everything in your funnel changes."
+  },
+  {
+    title: "The real breakdown I noticed",
+    subtitle: "Where attention is being lost",
+    content: "Your content creates a strong emotional spike. People feel seen immediately.\n\nBut the moment they hit your next step (lead magnet), that emotional intensity drops slightly.\n\nAnd in your niche, that drop is expensive.\n\nBecause these users don't make rational decisions — they make emotional continuation decisions.\n\nIf the next step doesn't feel like 'this explains everything', they leave — even if they liked you."
+  },
+  {
+    title: "Let me simplify this brutally",
+    subtitle: "What the user journey looks like right now",
+    content: "1. They see your video → 'this is me'\n2. Emotional recognition spikes\n3. They click your link\n4. Expectation is high\n5. The guide feels slightly too broad\n6. Emotional momentum breaks\n\nNot because your offer is bad.\nBecause the emotional bridge didn't carry them across the gap."
+  },
+  {
+    title: "Here's the core issue",
+    subtitle: "Your lead magnet is not 'wrong' — it's not sharp enough",
+    content: "Right now it sits in the category of 'general wellness guide'.\n\nBut your audience does NOT convert on general. They convert on SPECIFICITY.\n\nThey want:\n- hidden cause explanations\n- root system breakdowns\n- 'why everything you tried failed' clarity\n- a framework that connects their symptoms together\n\nSpecificity creates perceived value.\nPerceived value creates action."
+  },
+  {
+    title: "What your lead magnet SHOULD feel like",
+    subtitle: "This is the shift that changes everything",
+    content: "Instead of feeling like a guide…\n\nIt should feel like a REVEAL.\n\nSomething like:\n\n'The hidden root-cause system behind hormonal imbalance, skin issues, fatigue, and inflammation — and why most advice misses the real driver.'\n\nThat is not information.\nThat is closure."
+  },
+  {
+    title: "Visual funnel (what's missing)",
+    subtitle: "This is how your system should flow",
+    content: "CONTENT → EMOTIONAL RELIEF\n↓\nLEAD MAGNET → 'OH THIS EXPLAINS IT' MOMENT\n↓\nEMAIL → TRUST + BELIEF DEEPENING\n↓\nOFFER → NATURAL NEXT STEP\n\nRight now, the missing piece is the 'OH moment' in the middle.\n\nWithout that, everything after underperforms."
+  },
+  {
+    title: "What I would fix first (very specific)",
+    subtitle: "No theory — actual execution",
+    content: "If I touched your system, I would start here:\n\n1. Rename the lead magnet into a 'root cause system'\n2. Make the promise more emotionally precise\n3. Add a narrative: 'you are not broken, your body is responding to X pattern'\n4. Make content → lead magnet feel like continuation, not switch\n5. Add one strong 'missing explanation' mechanism inside the guide\n\nThis alone would lift conversion without more traffic."
+  },
+  {
+    title: "Lead magnet concept mock",
+    subtitle: "How it should feel — visually and emotionally",
+    content: "Imagine the guide feels like this:\n\n━━━━━━━━━━━━━━━\nTHE ROOT SYSTEM MAP\n━━━━━━━━━━━━━━━\n\n'Why your hormones, skin, energy, and digestion are all connected — and the one underlying system driving it'\n\nSection 1: Why symptoms appear together\nSection 2: The hidden trigger most people miss\nSection 3: Why diet/lifestyle alone doesn't fix it\nSection 4: The real reset sequence\n\nThis feels like understanding, not advice."
+  },
+  {
+    title: "What's happening financially",
+    subtitle: "This is not a traffic issue",
+    content: "You already have attention.\n\nThe leak is capture efficiency.\n\nEven a small improvement in opt-in conversion (2–5%) compounds heavily in your niche because trust is already established at the content stage.\n\nMore captured leads = more warmed buyers = more predictable revenue without increasing output."
+  },
+  {
+    title: "What I would do if this was mine",
+    subtitle: "Simple, clean system upgrade",
+    content: "1. Rebuild lead magnet positioning around 'root cause revelation'\n2. Tighten headline specificity (symptoms → system)\n3. Add emotional continuity from content → opt-in\n4. Strengthen 'this explains ME' feeling\n5. Make guide feel like missing truth, not education\n\nThis is refinement, not rebuilding."
+  },
+  {
+    title: "Final summary — tangible actions for today",
+    subtitle: "No fluff — just execution",
+    content: "Here's what you can do immediately:\n\n1. Rename your lead magnet into a 'system' (not a guide)\n2. Make the promise more specific (symptoms → root cause)\n3. Add a clear emotional hook: 'this explains why nothing worked before'\n4. Tighten your bio/link so there is ONLY one clear next step\n5. Align your content hooks directly with the lead magnet promise\n\nThese alone can lift conversions without more traffic."
+  },
+  {
+    title: "Where I come in",
+    subtitle: "Why I'm reaching out",
+    content: "I can help you rebuild this entire conversion path so your content, lead magnet, and offer actually move people in a clean psychological sequence.\n\nNot by adding more — but by making what you already have work harder.\n\nIf you want, just reply to my Instagram DM and we can go through it properly together."
+  }
+];
+
+function App() {
+  const [active, setActive] = useState(0);
+  const total = sections.length;
+
+  return React.createElement('div', {
+    style: {
+      minHeight: '100vh',
+      width: '100%',
+      background: 'linear-gradient(135deg, #0b0b0f 0%, #111 50%, #0b0b0f 100%)',
+      color: 'white',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      padding: '24px',
+      fontFamily: 'Inter, sans-serif'
+    }
+  },
+    React.createElement('div', { style: { maxWidth: '720px', width: '100%' } },
+
+      // Counter
+      React.createElement('div', {
+        style: { display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }
+      },
+        React.createElement('span', { style: { fontSize: '12px', color: 'rgba(255,255,255,0.4)', letterSpacing: '0.15em', textTransform: 'uppercase' } }, 'Strategic Funnel Audit'),
+        React.createElement('span', { style: { fontSize: '12px', color: 'rgba(255,255,255,0.4)' } }, `${active + 1} / ${total}`)
+      ),
+
+      // Progress bar
+      React.createElement('div', {
+        style: { height: '3px', background: 'rgba(255,255,255,0.1)', borderRadius: '99px', overflow: 'hidden', marginBottom: '24px' }
+      },
+        React.createElement('div', {
+          style: {
+            height: '100%',
+            background: 'white',
+            borderRadius: '99px',
+            width: `${((active + 1) / total) * 100}%`,
+            transition: 'width 0.4s ease'
+          }
+        })
+      ),
+
+      // Card
+      React.createElement('div', {
+        key: active,
+        style: {
+          background: 'white',
+          color: '#111',
+          borderRadius: '28px',
+          padding: '48px',
+          boxShadow: '0 40px 80px rgba(0,0,0,0.5)',
+          animation: 'fadeSlide 0.4s ease'
+        }
+      },
+        React.createElement('h1', {
+          style: { fontSize: 'clamp(22px, 4vw, 34px)', fontWeight: '600', margin: '0 0 8px 0', lineHeight: '1.25', color: '#0b0b0f' }
+        }, sections[active].title),
+        React.createElement('p', {
+          style: { fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.2em', color: '#aaa', margin: '0 0 28px 0' }
+        }, sections[active].subtitle),
+        React.createElement('p', {
+          style: { whiteSpace: 'pre-line', fontSize: '17px', lineHeight: '1.85', color: '#333', margin: 0 }
+        }, sections[active].content)
+      ),
+
+      // Controls
+      React.createElement('div', {
+        style: { display: 'flex', justifyContent: 'space-between', marginTop: '20px', gap: '12px' }
+      },
+        React.createElement('button', {
+          onClick: () => setActive(p => Math.max(0, p - 1)),
+          disabled: active === 0,
+          style: {
+            padding: '10px 24px',
+            borderRadius: '14px',
+            background: active === 0 ? 'rgba(255,255,255,0.05)' : 'rgba(255,255,255,0.12)',
+            color: active === 0 ? 'rgba(255,255,255,0.3)' : 'white',
+            border: 'none',
+            cursor: active === 0 ? 'not-allowed' : 'pointer',
+            fontSize: '15px',
+            transition: 'background 0.2s'
+          }
+        }, '← Back'),
+        React.createElement('button', {
+          onClick: () => setActive(p => Math.min(total - 1, p + 1)),
+          disabled: active === total - 1,
+          style: {
+            padding: '10px 28px',
+            borderRadius: '14px',
+            background: active === total - 1 ? 'rgba(255,255,255,0.1)' : 'white',
+            color: active === total - 1 ? 'rgba(255,255,255,0.3)' : '#0b0b0f',
+            border: 'none',
+            cursor: active === total - 1 ? 'not-allowed' : 'pointer',
+            fontSize: '15px',
+            fontWeight: '600',
+            transition: 'opacity 0.2s'
+          }
+        }, active === total - 1 ? 'Done ✓' : 'Next →')
+      )
+    )
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(React.createElement(App));
+</script>
+<style>
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+button:hover:not(:disabled) { opacity: 0.85; }
+</style>
+</body>
+</html>
